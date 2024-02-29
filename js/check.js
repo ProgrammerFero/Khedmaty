@@ -1,10 +1,3 @@
-// Check Sub
-if (localStorage.getItem("subEmailKhedmaty")) {
-    console.log("Yeaah");
-} else {
-    window.location = "../subscribe.html" ;
-}
-
 window.addEventListener("DOMContentLoaded", function () {
     var darkon = localStorage.getItem("DarkLightMode");
     if (darkon == "on") {

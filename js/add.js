@@ -11,3 +11,10 @@ form.addEventListener("submit" , e => {
     .catch(error => console.error("Error!!" , error.message))
 
 })
+
+// Check Sub
+if (localStorage.getItem("subEmailKhedmaty")) {
+    console.log("Yeaah");
+} else {
+    window.location = "../subscribe.html" ;
+}

@@ -1,3 +1,10 @@
+// Check Sub
+if (localStorage.getItem("subEmailKhedmaty")) {
+    console.log("Yeaah");
+} else {
+    window.location = "../subscribe.html" ;
+}
+
 let OrgProducts = JSON.parse(localStorage.getItem("topics"));
 let productId = localStorage.getItem("MainID");
 let productsDetails = OrgProducts.find((item) => item.id == productId);
