@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Free Courses" />
+    <meta name="description" content="A Lot Of Free Courses "/>
+    <meta name="keywords" content="FrontEnd , #Programmer_Fero "/>
+    <!-- Title -->
+    <title>Topices</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../assest/logo-cir.png" type="image/x-icon">
+    <!-- FontAsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- BoxICon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Css File -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body onclick="sound()">
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="menu-icons">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div> <!-- ./menu-icons -->
+
+                <a href="../index.html" class="logo" title="Programmer Fero"><i class='bx bx-church'></i> خدمتي</a>
+
+                    <ul class="nav-list">
+                        <li>
+                            <a href="../index.html">الصفحة الرئيسية</a>
+                        </li>
+                        
+                        <li class="move-right btn">
+                            <a href="../index.html#services">الخدمات الذي نقدمها</a>
+                        </li>
+
+                        <li class="move-right btn2">
+                            <a href="add.html">أضافة موضوع..</a>
+                        </li>
+                        
+
+                        <li>
+                            <i class="bi bi-moon" id="toggleDark"></i>
+                        </li>
+
+                        <li id="fulll">
+                            <i id="fullscreenButton" class='bx bx-fullscreen'></i>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    </header> <!-- ./Header -->
+
+    <!-- New Message -->
+    <div class="newMessage"></div>
+
+    <!-- New Message -->
+    <div class="subscribeMessage"></div>
+    
+    <section onclick="sound()" id="services" class="services sec">
+            <div class="services-content">
+                    <h3 class="sec-title"></h3>
+
+                    <div class="searches">
+                        <input onclick="sound()" type="text" id="searchInput" placeholder="Search..." onkeyup="searchCards()">
+                    </div>
+
+                    <div class="services-container" id="cards"></div>
+            </div>
+    </section>
+
+
+    <section onclick="sound()" class="foot sec-foot" id="foot">
+        <footer>
+
+            <div class="flex-foot">
+                <h3>Courses</h3>
+                <ul>
+                    <li><a onclick="sound()" href="../html/courses.html" onclick="saveid()" class="f1">Edit Apps</a></li>
+                    <li><a onclick="sound()" href="../html/courses.html" onclick="saveid()" class="f2">SketchWare</a></li>
+                    <li><a onclick="sound()" href="../html/100days.html">Frontend Projects</a></li>
+                    <li><a onclick="sound()" href="../html/courses.html" onclick="saveid()" class="f3" >Fix Problems</a></li>  
+                </ul>
+            </div>
+
+            <div class="flex-foot social-footer">
+                <h3>Social</h3>
+                <ul>
+                    <li><a onclick="sound()" href="https://www.facebook.com/felobater.fam1?mibextid=ZbWKwL"><i class='bx bxl-facebook' ></i> FaceBook</a></li>
+                    <li><a onclick="sound()" href="https://youtube.com/@programmerfero"><i class='bx bxl-youtube' ></i> Youtube</a></li>
+                    <li><a onclick="sound()" href="https://instagram.com/programmer_fero?igshid=YmMyMTA2M2Y="><i class='bx bxl-instagram-alt' ></i> Instgram</a></li>
+                    <li><a onclick="sound()" href="https://wa.link/vmle86"><i class='bx bxl-whatsapp' ></i> WhatsApp</a></li>  
+                </ul>
+            </div>
+
+            <div class="flex-foot">
+                <h3>Projects</h3>
+                <ul>
+                    <p>
+                        © Created By Programmer Fero In 1/12/2024
+                    </p>
+                    <p>
+                        Last Update In 
+                        25/1/2024
+                    </p>
+                    <p>
+                        The number of updates is 10
+                    </p>
+                </ul>
+            </div>
+        </footer>
+    </section>
+
+        <!-- Load library from the CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/alltopics.js"></script>
+    <script src="../js/check.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

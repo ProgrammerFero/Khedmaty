@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe Email & Name</title>
+    <!-- ICon -->
+    <link rel="shortcut icon" href="assest/mylogo.png" type="image/x-icon">
+    <!-- Css File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="subscribe" id="subscribe">
+        <form method="post" name="contact-form">
+            <div class="container">
+                <h3 id="top-bottom">أكتب إيميلك</h3>
+                <p id="top-bottom">يجب أضافة الايميل لأستعمال الموقع</p>
+                <input name="email" type="email" id="email" class="subemail" placeholder="email@email.com" required>
+                <p id="top-bottom">بعد الضغط علي ارسال - انتظر بعض الثواني للارسال</p>
+                <button id="send">Send</button>
+            </div>
+        </form>
+    </section>
+    
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwaR_pVSRVVgSgNs_Tf9Tkknxen-qsaIafbZTy7s1tTW0MCK_sAC_z5MdnMnGKUC-UpVw/exec" ;
+        const form = document.forms['contact-form'];
+        const input = document.querySelector(".subemail");
+
+        form.addEventListener("submit" , e => {
+            e.preventDefault()
+            fetch(scriptURL , {method: "post" , body: new FormData(form)})
+            .then(response => alert("Thanks You\n Your Data Is Submitted") )
+            .then(() => {window.location.reload();})
+            .catch(error => console.error("Error!!" , error.message))
+
+            localStorage.setItem("subEmailKhedmaty" , JSON.stringify(input.value ))
+        })
+
+        if (localStorage.getItem("subEmailKhedmaty")) {
+            window.location = "index.html" ;
+        }
+    </script>
+    
+</body>
+</html>
