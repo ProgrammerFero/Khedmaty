@@ -601,7 +601,7 @@ li.move-right {
 }
 
 .searches input {
-    width: 70%;
+    width: 75%;
     padding: 9px 25px;
     border-radius: 15px;
     border: 2px solid #000;
@@ -707,11 +707,7 @@ footer {
     place-items: center;
 }
 
-.social-footer ul li:nth-child(1) a:hover {
-    color: #0e0ee4;
-}
-
-.social-footer ul li:nth-child(2) a:hover {
+.social-footer ul li:nth-child(2) a:hover , .social-footer ul li:nth-child(1) a:hover{
     color: red;
 }
 
@@ -734,6 +730,7 @@ footer {
     font-size: 20px;
     position: relative;
     margin-bottom: 15px;
+    padding: 5px 0;
     color: #fff;
 }
 
@@ -748,7 +745,7 @@ footer {
 
 footer .flex-foot:nth-child(1) h3::after ,
 footer .flex-foot:nth-child(4) h3::after {
-    left: 2px;
+    right: 2px;
     width: 0px;
     animation: line-foot 4s infinite linear;
 }
@@ -765,7 +762,7 @@ footer .flex-foot:nth-child(4) h3::after {
 footer .flex-foot:nth-child(2) h3::after ,
 footer .flex-foot:nth-child(3) h3::after {
     width: 0;
-    left: 0;
+    right: 0;
     animation: line-foot2 4s infinite linear;
 }
 
@@ -779,23 +776,31 @@ footer .flex-foot:nth-child(3) h3::after {
 }
 
 .flex-foot ul {
-    margin-left: 14px ;
+    margin-right: 14px ;
 }
 
 .flex-foot li a {
     color: #fff;
     transition: all 1s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+.flex-foot li a i {
+    padding: 2px 7px ;
 }
 
 .flex-foot li {
-    font-size: 14px;
+    font-size: 15px;
     color: #fff;
     padding: 3px 5px;
     transition: color 1s , transform 1s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
 }
 
 .flex-foot li:hover {
-    transform: scale(1.1) translateX(15px);
+    transform: scale(1.1) translateX(-15px);
     cursor: pointer;
 }
 
@@ -2198,6 +2203,11 @@ to {
         color: red;
         text-decoration: underline;
     }
+
+    .searches input {
+        width: 100%;
+        padding: 9px 25px;
+    }
 }
 
 
@@ -2225,6 +2235,12 @@ to {
         padding: 14px 12px ;
         width: 245px;
     }   
+
+    .subscribe .p2-sub {
+        /* font-size: 12px; */
+        width: 250px;
+        margin: 10px auto;
+    }
 
     .contact form {
         width: 80%;
@@ -2465,7 +2481,7 @@ to {
 @media screen and (max-width: 358px ) {
     .subscribe #email {
         padding: 12px 10px;
-        width: 204px;
+        width: 254px;
     }
 
     .about-content .right p {

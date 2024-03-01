@@ -15,9 +15,9 @@
         <form method="post" name="contact-form">
             <div class="container">
                 <h3 id="top-bottom">أكتب إيميلك</h3>
-                <p id="top-bottom">يجب أضافة الايميل لأستعمال الموقع</p>
+                <p id="top-bottom" class="p1-sub">يجب أضافة الايميل لأستعمال الموقع</p>
                 <input name="email" type="email" id="email" class="subemail" placeholder="email@email.com" required>
-                <p id="top-bottom">بعد الضغط علي ارسال - انتظر بعض الثواني للارسال</p>
+                <p id="top-bottom" class="p2-sub"></p>
                 <button id="send">Send</button>
             </div>
         </form>
@@ -27,9 +27,14 @@
         const scriptURL = "https://script.google.com/macros/s/AKfycbwaR_pVSRVVgSgNs_Tf9Tkknxen-qsaIafbZTy7s1tTW0MCK_sAC_z5MdnMnGKUC-UpVw/exec" ;
         const form = document.forms['contact-form'];
         const input = document.querySelector(".subemail");
+        const p1Sub = document.querySelector(".p1-sub");
+        const p2Sub = document.querySelector(".p2-sub");
+        
 
         form.addEventListener("submit" , e => {
-            e.preventDefault()
+            e.preventDefault();
+            p2Sub.innerHTML = "انتظر بعض الثواني للارسال" ;
+            // p1Sub.innerHTML = "" ;
             fetch(scriptURL , {method: "post" , body: new FormData(form)})
             .then(response => alert("Thanks You\n Your Data Is Submitted") )
             .then(() => {window.location.reload();})
